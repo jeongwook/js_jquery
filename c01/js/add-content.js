@@ -1,7 +1,11 @@
-var today = new Date();
-var hourNow = today.getHours();
+/* This script displays a greeting to the user based on the current time.
+   It is an example from JavaScript & jQuery book */
+
+var today = new Date();			// Create a new date object
+var hourNow = today.getHours();	// Find the current hour
 var greeting;
 
+// Display the appropriate greeting based on the current time
 if (hourNow > 18) {
 	greeting = 'Good evening!';
 } else if (hourNow > 12) {
@@ -13,3 +17,4 @@ if (hourNow > 18) {
 }
 
 document.write('<h3>' + greeting + '</h3>');
+
