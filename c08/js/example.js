@@ -45,8 +45,8 @@ $ (function() {                                             // When the DOM is r
 
     // CLICK ON A SESSION TO LOAD THE DESCRIPTION
     $('#content').on('click', '#sessions li a', function(e) {   // Click on session
-        e.preventDefault();                                         // Prevent loading
-        var fragment = this.href;                                   // Title is in href
+        e.preventDefault();                                     // Prevent loading
+        var fragment = this.href;                               // Title is in href
 
         fragment = fragment.replace('#', ' #');                 // Add space after#
         $('#details').load(fragment);                           // To load info
@@ -57,15 +57,15 @@ $ (function() {                                             // When the DOM is r
 
 
     // CLICK ON PRIMARY NAVIGATION
-    $('nav a').on('click', function(e) {                       // Click on nav
-        e.preventDefault();                                      // Prevent loading
-        var url = this.href;                                     // Get URL to load
+    $('nav a').on('click', function(e) {                        // Click on nav
+        e.preventDefault();                                     // Prevent loading
+        var url = this.href;                                    // Get URL to load
 
-        $('nav a.current').removeClass('current');               // Update nav
+        $('nav a.current').removeClass('current');              // Update nav
         $(this).addClass('current');
 
-        $('#container').remove();                                // Remove old part
-        $('#content').load(url + ' #container').hide().fadeIn('slow'); // Add new
+        $('#container').remove();                               // Remove old part
+        $('#content').load(url + ' #container').hide().fadeIn('slow');  // Add new
     });
 });
 
